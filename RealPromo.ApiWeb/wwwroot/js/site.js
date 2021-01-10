@@ -1,4 +1,4 @@
-﻿var connection = new signalR.HubConnectionBuilder().withUrl("/PromoHub").build();
+﻿var connection = new signalR.HubConnectionBuilder().withAutomaticReconnect().withUrl("/PromoHub").build();
 
 connection.start().then(function () {
     console.info("Connected!");
